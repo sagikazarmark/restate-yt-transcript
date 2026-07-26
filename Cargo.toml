@@ -1,0 +1,22 @@
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+[workspace.package]
+version = "0.11.0"
+edition = "2024"
+rust-version = "1.92"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/sagikazarmark/restate-yt-transcript"
+homepage = "https://github.com/sagikazarmark/restate-yt-transcript"
+
+[workspace.dependencies]
+restate-sdk = { version = "0.11", default-features = false }
+serde = { version = "1", features = ["derive"] }
+
+[workspace.metadata.release]
+sign-commit = true
+sign-tag = true
+shared-version = true
+tag-message = "Release {{version}}"
+tag-name = "v{{version}}"
