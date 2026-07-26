@@ -37,6 +37,7 @@ See the [library README](crates/restate-yt-transcript/README.md) for the complet
 ## Operational Notes
 
 - The upstream crate uses unofficial, undocumented YouTube interfaces. YouTube changes can break retrieval, and version 0.1.8 contains internal `unwrap` calls that may panic on exceptional client or cookie data.
+- Version 0.1.8 also pins `quick-xml 0.37.5`, which has known denial-of-service advisories. The audit exceptions are recorded in `.cargo/audit.toml` until upstream can accept `quick-xml >=0.41`.
 - The default endpoint does not use cookies or proxies. Embed the library service and inject a configured `YouTubeTranscriptApi` when those are required.
 - Transcript-list and streaming-data responses may contain signed YouTube URLs. Set `restate.service.ingress_private = true` when clients must not invoke the service directly.
 - Each YouTube operation attempts at most five times with exponential backoff. Known semantic failures are terminal; blocked and generic request failures are retried within that bound.

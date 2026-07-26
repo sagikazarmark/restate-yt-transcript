@@ -9,6 +9,7 @@ repository.workspace = true
 homepage.workspace = true
 
 [dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
 restate-sdk = { workspace = true, features = ["hyper", "schemars"] }
 schemars = "1"
 serde = { workspace = true }
