@@ -11,7 +11,7 @@ repository = "https://github.com/sagikazarmark/restate-yt-transcript"
 homepage = "https://github.com/sagikazarmark/restate-yt-transcript"
 
 [workspace.dependencies]
-restate-yt-transcript = { path = "crates/restate-yt-transcript" }
+restate-yt-transcript = { path = "crates/restate-yt-transcript", version = "0.1.0" }
 
 restate-sdk = { version = "0.11", default-features = false }
 serde = { version = "1", features = ["derive"] }
