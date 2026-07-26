@@ -1,6 +1,6 @@
 mod service;
 
 #[cfg(test)]
-mod contract_tests;
+mod tests;
 
 pub use service::*;
