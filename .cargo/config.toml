@@ -1,0 +1,4 @@
+[env]
+# yt-transcript-rs declares cargo-husky as a regular (not dev) dependency, so its
+# build script installs git hooks into this repo on every build. Opt out.
+CARGO_HUSKY_DONT_INSTALL_HOOKS = "1"
